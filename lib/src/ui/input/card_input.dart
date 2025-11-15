@@ -1,6 +1,6 @@
 // ignore_for_file: no_logic_in_create_state
 
-import 'package:credit_card_scanner/models/card_details.dart';
+// import 'package:credit_card_scanner/models/card_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_paystack_payment/src/common/card_utils.dart';
 import 'package:flutter_paystack_payment/src/common/scan_util.dart';
@@ -75,18 +75,18 @@ class _CardInputState extends State<CardInput> {
             suffix: widget.showScanButton
                 ? GestureDetector(
                     onTap: () async {
-                      ScanCard scanCard = ScanCard();
-                      CardDetails cardDetails = await scanCard.scanCard();
-                      setState(() {
-                        numberController.text = cardDetails.cardNumber;
-                        _card!.number =
-                            CardUtils.getCleanedNumber(cardDetails.cardNumber);
-                        // _card!.expiryMonth =
-                        //     int.parse(cardDetails.expiryDate.split('/')[0]);
-                        // _card!.expiryYear =
-                        //     int.parse(cardDetails.expiryDate.split('/')[1]);
-                        // _card!.cvc = cardDetail;
-                      });
+                      // ScanCard scanCard = ScanCard();
+                      // CardDetails cardDetails = await scanCard.scanCard();
+                      // setState(() {
+                      //   numberController.text = cardDetails.cardNumber;
+                      //   _card!.number =
+                      //       CardUtils.getCleanedNumber(cardDetails.cardNumber);
+                      //   // _card!.expiryMonth =
+                      //   //     int.parse(cardDetails.expiryDate.split('/')[0]);
+                      //   // _card!.expiryYear =
+                      //   //     int.parse(cardDetails.expiryDate.split('/')[1]);
+                      //   // _card!.cvc = cardDetail;
+                      // });
                     },
                     child: getCardIcon())
                 : getCardIcon(),
